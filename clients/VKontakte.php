@@ -34,7 +34,7 @@ use yii\custom\authclient\OAuth2;
  *
  * @see http://vk.com/editapp?act=create
  * @see http://vk.com/developers.php?oid=-1&p=users.get
- *
+ * 
  * @author Paul Klimov <klimov.paul@gmail.com>
  * @since 2.0
  */
