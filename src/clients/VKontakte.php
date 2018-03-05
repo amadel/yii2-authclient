@@ -86,6 +86,7 @@ class VKontakte extends OAuth2
     {
         $response = $this->api('users.get.json', 'GET', [
             'fields' => implode(',', $this->attributeNames),
+            'v' => 2,
         ]);
 
         if (empty($response['response'])) {
