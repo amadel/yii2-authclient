@@ -5,9 +5,9 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\authclient\clients;
+namespace yii\custom\authclient\clients;
 
-use yii\authclient\OAuth2;
+use yii\custom\authclient\OAuth2;
 
 /**
  * Google allows authentication via Google OAuth.
@@ -22,10 +22,10 @@ use yii\authclient\OAuth2;
  * ```php
  * 'components' => [
  *     'authClientCollection' => [
- *         'class' => 'yii\authclient\Collection',
+ *         'class' => 'yii\custom\authclient\Collection',
  *         'clients' => [
  *             'google' => [
- *                 'class' => 'yii\authclient\clients\Google',
+ *                 'class' => 'yii\custom\authclient\clients\Google',
  *                 'clientId' => 'google_client_id',
  *                 'clientSecret' => 'google_client_secret',
  *             ],

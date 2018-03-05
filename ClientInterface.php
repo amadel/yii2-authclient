@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\authclient;
+namespace yii\custom\authclient;
 
 /**
  * ClientInterface declares basic interface all Auth clients should follow.

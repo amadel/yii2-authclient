@@ -9,7 +9,7 @@ Each Auth client has a property `httpClient`, which can be used to setup HTTP cl
 For example:
 
 ```php
-use yii\authclient\Google;
+use yii\custom\authclient\Google;
 
 $authClient = new Google([
     'httpClient' => [
@@ -18,7 +18,7 @@ $authClient = new Google([
 ]);
 ```
 
-In case you are using [[\yii\authclient\Collection]] component, you can use its property `httpClient` to setup
+In case you are using [[\yii\custom\authclient\Collection]] component, you can use its property `httpClient` to setup
 HTTP client configuration to all internal Auth clients at once.
 Application configuration example:
 
@@ -26,19 +26,19 @@ Application configuration example:
 return [
     'components' => [
         'authClientCollection' => [
-            'class' => 'yii\authclient\Collection',
+            'class' => 'yii\custom\authclient\Collection',
             // all Auth clients will use this configuration for HTTP client:
             'httpClient' => [
                 'transport' => 'yii\httpclient\CurlTransport',
             ],
             'clients' => [
                 'google' => [
-                    'class' => 'yii\authclient\clients\Google',
+                    'class' => 'yii\custom\authclient\clients\Google',
                     'clientId' => 'google_client_id',
                     'clientSecret' => 'google_client_secret',
                 ],
                 'facebook' => [
-                    'class' => 'yii\authclient\clients\Facebook',
+                    'class' => 'yii\custom\authclient\clients\Facebook',
                     'clientId' => 'facebook_client_id',
                     'clientSecret' => 'facebook_client_secret',
                 ],

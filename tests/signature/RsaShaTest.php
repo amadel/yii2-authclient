@@ -2,7 +2,7 @@
 
 namespace yiiunit\extensions\authclient\signature;
 
-use yii\authclient\signature\RsaSha;
+use yii\custom\authclient\signature\RsaSha;
 use yiiunit\extensions\authclient\TestCase;
 
 class RsaShaTest extends TestCase

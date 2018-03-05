@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\authclient\signature;
+namespace yii\custom\authclient\signature;
 
 use yii\base\Object;
 

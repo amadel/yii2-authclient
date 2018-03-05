@@ -5,12 +5,12 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\authclient;
+namespace yii\custom\authclient;
 
 use Jose\Factory\JWKFactory;
 use Jose\Loader;
 use Yii;
-use yii\authclient\signature\HmacSha;
+use yii\custom\authclient\signature\HmacSha;
 use yii\base\InvalidConfigException;
 use yii\base\InvalidParamException;
 use yii\caching\Cache;
@@ -26,10 +26,10 @@ use yii\web\HttpException;
  * ```php
  * 'components' => [
  *     'authClientCollection' => [
- *         'class' => 'yii\authclient\Collection',
+ *         'class' => 'yii\custom\authclient\Collection',
  *         'clients' => [
  *             'google' => [
- *                 'class' => 'yii\authclient\OpenIdConnect',
+ *                 'class' => 'yii\custom\authclient\OpenIdConnect',
  *                 'issuerUrl' => 'https://accounts.google.com',
  *                 'clientId' => 'google_client_id',
  *                 'clientSecret' => 'google_client_secret',

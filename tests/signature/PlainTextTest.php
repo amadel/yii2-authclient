@@ -2,7 +2,7 @@
 
 namespace yiiunit\extensions\authclient\signature;
 
-use yii\authclient\signature\PlainText;
+use yii\custom\authclient\signature\PlainText;
 use yiiunit\extensions\authclient\TestCase;
 
 class PlainTextTest extends TestCase

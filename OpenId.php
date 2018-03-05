@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\authclient;
+namespace yii\custom\authclient;
 
 use yii\base\Exception;
 use Yii;
@@ -17,7 +17,7 @@ use Yii;
  * Usage:
  *
  * ```php
- * use yii\authclient\OpenId;
+ * use yii\custom\authclient\OpenId;
  *
  * $client = new OpenId();
  * $client->authUrl = 'https://open.id.provider.url'; // Setup provider endpoint

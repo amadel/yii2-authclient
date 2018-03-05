@@ -25,15 +25,15 @@ After extension is installed you need to setup auth client collection applicatio
 return [
     'components' => [
         'authClientCollection' => [
-            'class' => 'yii\authclient\Collection',
+            'class' => 'yii\custom\authclient\Collection',
             'clients' => [
                 'google' => [
-                    'class' => 'yii\authclient\clients\Google',
+                    'class' => 'yii\custom\authclient\clients\Google',
                     'clientId' => 'google_client_id',
                     'clientSecret' => 'google_client_secret',
                 ],
                 'facebook' => [
-                    'class' => 'yii\authclient\clients\Facebook',
+                    'class' => 'yii\custom\authclient\clients\Facebook',
                     'clientId' => 'facebook_client_id',
                     'clientSecret' => 'facebook_client_secret',
                 ],
@@ -48,14 +48,14 @@ return [
 
 Out of the box the following clients are provided:
 
-- [[\yii\authclient\clients\Facebook|Facebook]].
-- [[yii\authclient\clients\GitHub|GitHub]].
-- Google (via [[yii\authclient\clients\Google|OAuth]] and [[yii\authclient\clients\GoogleHybrid|OAuth Hybrid]]).
-- [[yii\authclient\clients\LinkedIn|LinkedIn]].
-- [[yii\authclient\clients\Live|Microsoft Live]].
-- [[yii\authclient\clients\Twitter|Twitter]].
-- [[yii\authclient\clients\VKontakte|VKontakte]].
-- [[yii\authclient\clients\Yandex|Yandex]].
+- [[\yii\custom\authclient\clients\Facebook|Facebook]].
+- [[yii\custom\authclient\clients\GitHub|GitHub]].
+- Google (via [[yii\custom\authclient\clients\Google|OAuth]] and [[yii\custom\authclient\clients\GoogleHybrid|OAuth Hybrid]]).
+- [[yii\custom\authclient\clients\LinkedIn|LinkedIn]].
+- [[yii\custom\authclient\clients\Live|Microsoft Live]].
+- [[yii\custom\authclient\clients\Twitter|Twitter]].
+- [[yii\custom\authclient\clients\VKontakte|VKontakte]].
+- [[yii\custom\authclient\clients\Yandex|Yandex]].
 
 Configuration for each client is a bit different. For OAuth it's required to get client ID and secret key from
 the service you're going to use. For OpenID it works out of the box in most cases.

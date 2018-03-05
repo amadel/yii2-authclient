@@ -2,9 +2,9 @@
 
 namespace yiiunit\extensions\authclient\clients;
 
-use yii\authclient\clients\Google;
-use yii\authclient\OAuthToken;
-use yii\authclient\signature\RsaSha;
+use yii\custom\authclient\clients\Google;
+use yii\custom\authclient\OAuthToken;
+use yii\custom\authclient\signature\RsaSha;
 use yiiunit\extensions\authclient\TestCase;
 
 /**

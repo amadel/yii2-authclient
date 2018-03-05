@@ -5,9 +5,9 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\authclient\clients;
+namespace yii\custom\authclient\clients;
 
-use yii\authclient\OAuth2;
+use yii\custom\authclient\OAuth2;
 
 /**
  * Live allows authentication via Microsoft Live OAuth.
@@ -19,10 +19,10 @@ use yii\authclient\OAuth2;
  * ```php
  * 'components' => [
  *     'authClientCollection' => [
- *         'class' => 'yii\authclient\Collection',
+ *         'class' => 'yii\custom\authclient\Collection',
  *         'clients' => [
  *             'live' => [
- *                 'class' => 'yii\authclient\clients\Live',
+ *                 'class' => 'yii\custom\authclient\clients\Live',
  *                 'clientId' => 'live_client_id',
  *                 'clientSecret' => 'live_client_secret',
  *             ],

@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\authclient;
+namespace yii\custom\authclient;
 
 use yii\base\Exception;
 use yii\base\InvalidParamException;

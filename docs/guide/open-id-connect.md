@@ -2,17 +2,17 @@ OpenID Connect
 ==============
 
 This extension provides support for [OpenId Connect](http://openid.net/connect/) authentication protocol via
-[[\yii\authclient\OpenIdConnect]] class.
+[[\yii\custom\authclient\OpenIdConnect]] class.
 
 Application configuration example:
 
 ```php
 'components' => [
     'authClientCollection' => [
-        'class' => 'yii\authclient\Collection',
+        'class' => 'yii\custom\authclient\Collection',
         'clients' => [
             'google' => [
-                'class' => 'yii\authclient\OpenIdConnect',
+                'class' => 'yii\custom\authclient\OpenIdConnect',
                 'issuerUrl' => 'https://accounts.google.com',
                 'clientId' => 'google_client_id',
                 'clientSecret' => 'google_client_secret',
@@ -43,5 +43,5 @@ or add
 
 to the `require` section of your composer.json.
 
-> Note: if you are using well-trusted 'OpenID Connect' provider, you may disable [[\yii\authclient\OpenIdConnect::$validateJws]],
+> Note: if you are using well-trusted 'OpenID Connect' provider, you may disable [[\yii\custom\authclient\OpenIdConnect::$validateJws]],
   making installation of `spomky-labs/jose` library redundant, however it is not recommended as it violates the protocol specification.

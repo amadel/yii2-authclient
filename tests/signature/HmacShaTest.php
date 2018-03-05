@@ -2,7 +2,7 @@
 
 namespace yiiunit\extensions\authclient\signature;
 
-use yii\authclient\signature\HmacSha;
+use yii\custom\authclient\signature\HmacSha;
 use yiiunit\extensions\authclient\TestCase;
 
 class HmacShaTest extends TestCase

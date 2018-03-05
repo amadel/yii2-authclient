@@ -2,7 +2,7 @@
 
 namespace yiiunit\extensions\authclient;
 
-use yii\authclient\OpenIdConnect;
+use yii\custom\authclient\OpenIdConnect;
 use yii\caching\ArrayCache;
 
 class OpenIdConnectTest extends TestCase

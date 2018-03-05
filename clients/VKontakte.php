@@ -5,9 +5,9 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\authclient\clients;
+namespace yii\custom\authclient\clients;
 
-use yii\authclient\OAuth2;
+use yii\custom\authclient\OAuth2;
 
 /**
  * VKontakte allows authentication via VKontakte OAuth.
@@ -19,10 +19,10 @@ use yii\authclient\OAuth2;
  * ```php
  * 'components' => [
  *     'authClientCollection' => [
- *         'class' => 'yii\authclient\Collection',
+ *         'class' => 'yii\custom\authclient\Collection',
  *         'clients' => [
  *             'vkontakte' => [
- *                 'class' => 'yii\authclient\clients\VKontakte',
+ *                 'class' => 'yii\custom\authclient\clients\VKontakte',
  *                 'clientId' => 'vkontakte_client_id',
  *                 'clientSecret' => 'vkontakte_client_secret',
  *             ],

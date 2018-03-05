@@ -8,7 +8,7 @@ HTTP クライアントをセットアップする
 例えば、
 
 ```php
-use yii\authclient\Google;
+use yii\custom\authclient\Google;
 
 $authClient = new Google([
     'httpClient' => [
@@ -17,26 +17,26 @@ $authClient = new Google([
 ]);
 ```
 
-[[\yii\authclient\Collection]] コンポーネントを使うのであれば、その中の全ての認証クライアントに対して、`httpClient` プロパティを使って HTTP クライアントの構成を一度にまとめてセットアップすることが出来ます。
+[[\yii\custom\authclient\Collection]] コンポーネントを使うのであれば、その中の全ての認証クライアントに対して、`httpClient` プロパティを使って HTTP クライアントの構成を一度にまとめてセットアップすることが出来ます。
 アプリケーション構成の例を示します。
 
 ```php
 return [
     'components' => [
         'authClientCollection' => [
-            'class' => 'yii\authclient\Collection',
+            'class' => 'yii\custom\authclient\Collection',
             // 全ての認証クライアントは HTTP クライアントにこの構成を使用する
             'httpClient' => [
                 'transport' => 'yii\httpclient\CurlTransport',
             ],
             'clients' => [
                 'google' => [
-                    'class' => 'yii\authclient\clients\Google',
+                    'class' => 'yii\custom\authclient\clients\Google',
                     'clientId' => 'google_client_id',
                     'clientSecret' => 'google_client_secret',
                 ],
                 'facebook' => [
-                    'class' => 'yii\authclient\clients\Facebook',
+                    'class' => 'yii\custom\authclient\clients\Facebook',
                     'clientId' => 'facebook_client_id',
                     'clientSecret' => 'facebook_client_secret',
                 ],

@@ -9,7 +9,7 @@
 Например:
 
 ```php
-use yii\authclient\Google;
+use yii\custom\authclient\Google;
 
 $authClient = new Google([
     'httpClient' => [
@@ -18,7 +18,7 @@ $authClient = new Google([
 ]);
 ```
 
-В случае, если вы используете копонент [[\yii\authclient\Collection]], вы можете воспользоваться его свойством `httpClient`
+В случае, если вы используете копонент [[\yii\custom\authclient\Collection]], вы можете воспользоваться его свойством `httpClient`
 для задания конфигурации HTTP клиента для всех внутренних Auth клиентов.
 Пример конфигурации приложения:
 
@@ -26,19 +26,19 @@ $authClient = new Google([
 return [
     'components' => [
         'authClientCollection' => [
-            'class' => 'yii\authclient\Collection',
+            'class' => 'yii\custom\authclient\Collection',
             // все Auth клиенты будут использовать эту конфигурацию для HTTP клиента:
             'httpClient' => [
                 'transport' => 'yii\httpclient\CurlTransport',
             ],
             'clients' => [
                 'google' => [
-                    'class' => 'yii\authclient\clients\Google',
+                    'class' => 'yii\custom\authclient\clients\Google',
                     'clientId' => 'google_client_id',
                     'clientSecret' => 'google_client_secret',
                 ],
                 'facebook' => [
-                    'class' => 'yii\authclient\clients\Facebook',
+                    'class' => 'yii\custom\authclient\clients\Facebook',
                     'clientId' => 'facebook_client_id',
                     'clientSecret' => 'facebook_client_secret',
                 ],

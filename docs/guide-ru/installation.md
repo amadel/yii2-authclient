@@ -25,15 +25,15 @@ composer require --prefer-dist yiisoft/yii2-authclient "~2.1.0"
 return [
     'components' => [
         'authClientCollection' => [
-            'class' => 'yii\authclient\Collection',
+            'class' => 'yii\custom\authclient\Collection',
             'clients' => [
                 'google' => [
-                    'class' => 'yii\authclient\clients\Google',
+                    'class' => 'yii\custom\authclient\clients\Google',
                     'clientId' => 'google_client_id',
                     'clientSecret' => 'google_client_secret',
                 ],
                 'facebook' => [
-                    'class' => 'yii\authclient\clients\Facebook',
+                    'class' => 'yii\custom\authclient\clients\Facebook',
                     'clientId' => 'facebook_client_id',
                     'clientSecret' => 'секретный_ключ_facebook_client',
                 ],
@@ -48,14 +48,14 @@ return [
 
 Из коробки предоставляются следующие клиенты:
 
-- [[\yii\authclient\clients\Facebook|Facebook]].
-- [[yii\authclient\clients\GitHub|GitHub]].
-- Google (с помощью [[yii\authclient\clients\Google|OAuth]] и [[yii\authclient\clients\GoogleHybrid|OAuth Hybrid]]).
-- [[yii\authclient\clients\LinkedIn|LinkedIn]].
-- [[yii\authclient\clients\Live|Microsoft Live]].
-- [[yii\authclient\clients\Twitter|Twitter]].
-- [[yii\authclient\clients\VKontakte|VKontakte]].
-- [[yii\authclient\clients\Yandex|Yandex]].
+- [[\yii\custom\authclient\clients\Facebook|Facebook]].
+- [[yii\custom\authclient\clients\GitHub|GitHub]].
+- Google (с помощью [[yii\custom\authclient\clients\Google|OAuth]] и [[yii\custom\authclient\clients\GoogleHybrid|OAuth Hybrid]]).
+- [[yii\custom\authclient\clients\LinkedIn|LinkedIn]].
+- [[yii\custom\authclient\clients\Live|Microsoft Live]].
+- [[yii\custom\authclient\clients\Twitter|Twitter]].
+- [[yii\custom\authclient\clients\VKontakte|VKontakte]].
+- [[yii\custom\authclient\clients\Yandex|Yandex]].
 
 Конфигурация для каждого клиента несколько отличается. Для OAuth, это обязательное получение ID клиента и секретного
 ключа сервиса, который Вы собираетесь использовать. Для OpenID, в большинстве случаев, это работает из коробки.

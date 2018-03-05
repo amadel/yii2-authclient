@@ -3,7 +3,7 @@
 
 ## Добавление экшена в контроллер
 
-Следующий шаг заключается в добавлении [[yii\authclient\AuthAction]] в веб контроллер и обеспечении реализации 
+Следующий шаг заключается в добавлении [[yii\custom\authclient\AuthAction]] в веб контроллер и обеспечении реализации 
 `successCallback`, выполняющий ваши требования.
 
 
@@ -15,7 +15,7 @@ class SiteController extends Controller
     {
         return [
             'auth' => [
-                'class' => 'yii\authclient\AuthAction',
+                'class' => 'yii\custom\authclient\AuthAction',
                 'successCallback' => [$this, 'onAuthSuccess'],
             ],
         ];
@@ -97,7 +97,7 @@ class SiteController extends Controller
 
 ### Базовая структура клиента аутентификации
 
-Хоть все клиенты и разные, всё же они реализуют базовый интерфейс [[yii\authclient\ClientInterface]], который управляет 
+Хоть все клиенты и разные, всё же они реализуют базовый интерфейс [[yii\custom\authclient\ClientInterface]], который управляет 
 общим API.
 
 У каждого клиента есть некоторые описательные данные, которые могут использоваться в различных целях:
@@ -121,20 +121,20 @@ class SiteController extends Controller
 
 Определение списка атрибутов, возвращаемых внешним сервисом аутентификации, зависит от типа самого клиента:
 
-- [[yii\authclient\OpenId]]: сочетание `requiredAttributes` и `optionalAttributes`.
-- [[yii\authclient\OAuth1]] и [[yii\authclient\OAuth2]]: поле `scope`, обратите внимание, что разные сервисы используют 
+- [[yii\custom\authclient\OpenId]]: сочетание `requiredAttributes` и `optionalAttributes`.
+- [[yii\custom\authclient\OAuth1]] и [[yii\custom\authclient\OAuth2]]: поле `scope`, обратите внимание, что разные сервисы используют 
 разные форматы для scope.
 
 > Совет: если Вы используете несколько различных клиентов, Вы можете объединить структуры атрибутов, которые они 
-возвращают, при помощи[[yii\authclient\BaseClient::normalizeUserAttributeMap]].
+возвращают, при помощи[[yii\custom\authclient\BaseClient::normalizeUserAttributeMap]].
 
 
 ## Добавление виджета в представление аутентификации
 
-В представлениях можно использовать готовый виджет [[yii\authclient\widgets\AuthChoice]]:
+В представлениях можно использовать готовый виджет [[yii\custom\authclient\widgets\AuthChoice]]:
 
 ```php
-<?= yii\authclient\widgets\AuthChoice::widget([
+<?= yii\custom\authclient\widgets\AuthChoice::widget([
      'baseAuthUrl' => ['site/auth'],
      'popupMode' => false,
 ]) ?>

@@ -2,7 +2,7 @@
 
 namespace yiiunit\extensions\authclient;
 
-use yii\authclient\OAuthToken;
+use yii\custom\authclient\OAuthToken;
 
 class TokenTest extends TestCase
 {

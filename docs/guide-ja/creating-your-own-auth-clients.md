@@ -5,14 +5,14 @@
 そうするためには、最初に、外部認証プロバイダによってどのプロトコルがサポートされているかを見出す必要があります。
 それによって、あなたのエクステンションの基底クラスの名前が決ります。
 
- - OAuth 2 のためには [[yii\authclient\OAuth2]] を使います。
- - OAuth 1/1.0a のためには [[yii\authclient\OAuth1]] を使います。
- - OpenID のためには [[yii\authclient\OpenId]] を使います。
+ - OAuth 2 のためには [[yii\custom\authclient\OAuth2]] を使います。
+ - OAuth 1/1.0a のためには [[yii\custom\authclient\OAuth1]] を使います。
+ - OpenID のためには [[yii\custom\authclient\OpenId]] を使います。
 
 この段階で、対応するメソッドを宣言することによって、認証クライアントのデフォルトの名前、タイトル、および、ビューオプションを決定することが出来ます。
 
 ```php
-use yii\authclient\OAuth2;
+use yii\custom\authclient\OAuth2;
 
 class MyAuthClient extends OAuth2
 {
@@ -38,14 +38,14 @@ class MyAuthClient extends OAuth2
 
 使用する基底クラスによって、宣言し直さなければならないフィールドやメソッドが異なります。
 
-## [[yii\authclient\OpenId]]
+## [[yii\custom\authclient\OpenId]]
 
-必要なことは、[[yii\authclient\OpenId::authUrl|authUrl]] フィールドを宣言し直して URL を指定することだけです。
+必要なことは、[[yii\custom\authclient\OpenId::authUrl|authUrl]] フィールドを宣言し直して URL を指定することだけです。
 デフォルトの 必須属性 および/または オプション属性を設定することも可能です。
 例えば、
 
 ```php
-use yii\authclient\OpenId;
+use yii\custom\authclient\OpenId;
 
 class MyAuthClient extends OpenId
 {
@@ -62,19 +62,19 @@ class MyAuthClient extends OpenId
 }
 ```
 
-## [[yii\authclient\OAuth2]]
+## [[yii\custom\authclient\OAuth2]]
 
 以下のものを指定する必要があります。
 
-- 認証 URL - [[yii\authclient\OAuth2::authUrl|authUrl]] フィールド。
-- トークンリクエスト URL - [[yii\authclient\OAuth2::tokenUrl|tokenUrl]] フィールド。
-- API のベース URL - [[yii\authclient\OAuth2::apiBaseUrl|apiBaseUrl]] フィールド。
-- ユーザ属性取得ストラテジー - [[yii\authclient\OAuth2::initUserAttributes()|initUserAttributes()]] メソッド。
+- 認証 URL - [[yii\custom\authclient\OAuth2::authUrl|authUrl]] フィールド。
+- トークンリクエスト URL - [[yii\custom\authclient\OAuth2::tokenUrl|tokenUrl]] フィールド。
+- API のベース URL - [[yii\custom\authclient\OAuth2::apiBaseUrl|apiBaseUrl]] フィールド。
+- ユーザ属性取得ストラテジー - [[yii\custom\authclient\OAuth2::initUserAttributes()|initUserAttributes()]] メソッド。
 
 例えば、
 
 ```php
-use yii\authclient\OAuth2;
+use yii\custom\authclient\OAuth2;
 
 class MyAuthClient extends OAuth2
 {
@@ -96,20 +96,20 @@ class MyAuthClient extends OAuth2
 > Note: OAuth プロバイダの中には、OAuth の標準を厳格に遵守せず、標準と異なる仕様を導入しているものもあります。
   そのようなものに対してクライアントを実装するためには、追加の労力が必要になることがあります。
 
-## [[yii\authclient\OAuth1]]
+## [[yii\custom\authclient\OAuth1]]
 
 以下のものを指定する必要があります。
 
-- 認証 URL - [[yii\authclient\OAuth1::authUrl|authUrl]] フィールド。
-- リクエストトークン URL - [[yii\authclient\OAuth1::requestTokenUrl|requestTokenUrl]] フィールド。
-- アクセストークン URL - [[yii\authclient\OAuth1::accessTokenUrl|accessTokenUrl]] フィールド。
-- API のベース URL - [[yii\authclient\OAuth1::apiBaseUrl|apiBaseUrl]] フィールド。
-- ユーザ属性取得ストラテジー - [[yii\authclient\OAuth1::initUserAttributes()|initUserAttributes()]] メソッド。
+- 認証 URL - [[yii\custom\authclient\OAuth1::authUrl|authUrl]] フィールド。
+- リクエストトークン URL - [[yii\custom\authclient\OAuth1::requestTokenUrl|requestTokenUrl]] フィールド。
+- アクセストークン URL - [[yii\custom\authclient\OAuth1::accessTokenUrl|accessTokenUrl]] フィールド。
+- API のベース URL - [[yii\custom\authclient\OAuth1::apiBaseUrl|apiBaseUrl]] フィールド。
+- ユーザ属性取得ストラテジー - [[yii\custom\authclient\OAuth1::initUserAttributes()|initUserAttributes()]] メソッド。
 
 例えば、
 
 ```php
-use yii\authclient\OAuth1;
+use yii\custom\authclient\OAuth1;
 
 class MyAuthClient extends OAuth1
 {

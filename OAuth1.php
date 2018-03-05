@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\authclient;
+namespace yii\custom\authclient;
 
 use Yii;
 use yii\base\InvalidParamException;
@@ -18,7 +18,7 @@ use yii\web\HttpException;
  * In order to acquire access token perform following sequence:
  *
  * ```php
- * use yii\authclient\OAuth1;
+ * use yii\custom\authclient\OAuth1;
  *
  * $oauthClient = new OAuth1();
  * $requestToken = $oauthClient->fetchRequestToken(); // Get request token
